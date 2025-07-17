@@ -1,0 +1,101 @@
+.footerSection {
+    width: 100%;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 2rem 1rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about {
+    margin-bottom: 2rem;
+    max-width: 300px;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.about p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.linksContainer {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: left;
+    min-width: 300px;
+}
+
+.linksContainer > div {
+    min-width: 150px;
+}
+
+.product h3,
+.contact h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.product ul,
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product li,
+.contact li {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.4rem;
+}
+
+.iconRow {
+    display: flex;
+    padding-left: 0.25rem;
+    gap: 1rem;
+    margin-top: 0.4rem;
+}
+
+.iconLink {
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: #374151;
+}
+
+.iconLink:hover {
+    transform: scale(1.1);
+    color: #0a66c2; /* Hover color for LinkedIn-style branding */
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+}
+
+.bottomBar {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.85rem;
+    color: #6b7280;
+}

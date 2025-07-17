@@ -3,6 +3,14 @@
     background-color: #fff;
     border-radius: 0.5rem;
     padding: 2.5rem 1rem 3rem 1rem;
+    margin: 1rem 16rem;
+    height: 40vh;
+    max-width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     position: relative;
     user-select: none;
