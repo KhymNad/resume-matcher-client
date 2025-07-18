@@ -11,10 +11,11 @@ export default function RegionSelect({ region, setRegion }) {
             value={region}
             onChange={(e) => setRegion(e.target.value)}
         >
-            <option value="">Choose your region...</option>
-            <option value="north-america">North America</option>
-            <option value="europe">Europe</option>
-            <option value="asia">Asia</option>
+            <option value="us">🇺🇸 United States</option>
+            <option value="ca">🇨🇦 Canada</option>
+            <option value="gb">🇬🇧 United Kingdom</option>
+            <option value="au">🇦🇺 Australia</option>
+            <option value="de">🇩🇪 Germany</option>
             {/* add more regions */}
         </select>
         </>
