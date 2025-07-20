@@ -1,0 +1,49 @@
+.skeletonWrapper {
+    flex-shrink: 0;
+    width: 500px;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: white;
+    border: 1rem solid #ffffff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.skeletonCard {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite ease-in-out;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.skeletonTitle {
+    width: 60%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.skeletonLine {
+    width: 80%;
+    height: 14px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
