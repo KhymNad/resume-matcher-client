@@ -6,3 +6,4 @@ export {default as Footer} from './Footer/Footer';
 export {default as JobResultSection} from './HomePage/JobResultSection/JobResultSection';
 export {default as JobResultCard} from './HomePage/JobResultCard/JobResultCard';
 export {default as JobResultSkeleton} from './HomePage/JobResultSection/JobResultSkeleton';
+export {default as ResumePreview} from './HomePage/ResumePreview/ResumePreview';

@@ -55,7 +55,21 @@ export default function ResumeUpload({ file, setFile }) {
                 ⬆ Choose File
             </button>
 
-            {file && <p className={styles.selectedFile}>Selected file: {file.name}</p>}
+            {file && (
+                <div className={styles.previewContainer}>
+                    <p className={styles.selectedFile}>
+                        <strong>Selected file:</strong> {file.name}
+                    </p>
+                    {/* <a
+                        href={URL.createObjectURL(file)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.previewLink}
+                    >
+                        🔍 View File
+                    </a> */}
+                </div>
+            )}
         </div>
     );
 }

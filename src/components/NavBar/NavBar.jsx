@@ -6,8 +6,8 @@ export default function Navbar() {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <svg className={styles.icon} xmlns="http://www.w3.org/2000/svg" fill="#2563eb" viewBox="0 0 24 24" width="32" height="32">
-                <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z" />
-                <path fill="#2563eb" d="M7 7h10v2H7zm0 4h10v2H7z" />
+                    <path d="M3 3v18h18V3H3zm16 16H5V5h14v14z" />
+                    <path fill="#2563eb" d="M7 7h10v2H7zm0 4h10v2H7z" />
                 </svg>
                 <div className={styles.titleGroup}>
                 <h1 className={styles.title}>Resume Matcher</h1>
