@@ -40,6 +40,30 @@
     margin-top: 2px;
 }
 
+.rightSection {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: right;
+    gap:1rem;
+}
+
+.findJobsBtn {
+    background-color: #2563eb;
+    text-decoration: non;;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    transition: background-color 0.3s ease;
+}
+.findJobsBtn:hover {
+    background-color: #1d4ed8;
+}
+
 .accountBtn {
     background-color: #e5e7eb;
     border: none;

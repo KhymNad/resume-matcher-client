@@ -34,7 +34,7 @@ export default function ResumeUpload({ file, setFile }) {
                 or click to browse your files
             </div>
 
-            <div className={styles.fileTypes}><span>📄 PDF, DOCX</span></div>
+            <div className={styles.fileTypes}><span>📄 PDF</span></div>
 
             <input
                 type="file"
@@ -66,7 +66,7 @@ export default function ResumeUpload({ file, setFile }) {
                         rel="noopener noreferrer"
                         className={styles.previewLink}
                     >
-                        🔍 View File
+                        View File
                     </a> */}
                 </div>
             )}

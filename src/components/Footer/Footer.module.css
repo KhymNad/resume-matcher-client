@@ -67,6 +67,16 @@
     margin-bottom: 0.4rem;
 }
 
+.product a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.2s ease;
+}
+
+.product a:hover {
+    color: #0a66c2
+}
+
 .iconRow {
     display: flex;
     padding-left: 0.25rem;

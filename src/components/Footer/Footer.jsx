@@ -14,8 +14,8 @@ export default function Footer() {
                     <div className={styles.product}>
                         <h3>Product</h3>
                         <ul>
-                            <li>How it Works</li>
-                            <li>Features</li>
+                            <li><a href="/product">How it Works</a></li>
+                            <li><a href="/product">Features</a></li>
                         </ul>
                     </div>
 
