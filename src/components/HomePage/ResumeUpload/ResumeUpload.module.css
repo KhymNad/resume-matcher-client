@@ -30,6 +30,14 @@
     margin: 1rem auto;
 }
 
+.pdfIcon svg {
+    width: 20px;
+    height: 20px;
+    fill: #777;
+    display: block;
+    margin: 0.5rem 0;
+}
+
 .fileInput {
     display: none;
 }
@@ -58,6 +66,7 @@
     font-size: 0.875rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 

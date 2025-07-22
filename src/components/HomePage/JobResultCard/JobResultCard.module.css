@@ -73,6 +73,15 @@
     justify-content: flex-end;
 }
 
+.arrowIcon {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: 0.4em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
 .jobLink {
     background: #2563eb;
     color: #ffffff;

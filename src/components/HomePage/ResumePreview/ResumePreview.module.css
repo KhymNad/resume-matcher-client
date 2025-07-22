@@ -62,6 +62,34 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.textPreview {
+    white-space: pre-wrap;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.docxPreview {
+    background: #fff;
+    padding: 1rem;
+    max-height: 80vh;
+    overflow-x: auto;   /* 👈 enables horizontal scroll */
+    overflow-y: auto;
+    border-radius: 8px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Optional: make internal content not overflow container */
+.docxPreview * {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+    
 .unsupportedMsg {
     font-style: italic;
     color: #999;
