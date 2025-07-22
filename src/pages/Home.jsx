@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Navbar,
     RegionSelect,
@@ -11,45 +11,63 @@ import {
 import { uploadResumeWithJobs } from '../services/resume-matcher-api';
 import styles from './Home.module.css';
 import { AnimatePresence } from 'framer-motion';
+import toast, { Toaster } from 'react-hot-toast';
+import { useHomeContext } from '../context/HomeContext';
 
 export default function Home() {
-    const [region, setRegion] = useState('');
-    const [file, setFile] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [result, setResult] = useState(null);
-    const [error, setError] = useState(null);
-    const [activeSidebar, setActiveSidebar] = useState(null); // 'jobs' | 'resume' | null
+    const {
+        region, setRegion,
+        resumeFile, setResumeFile,
+        setParsedResume,
+        jobResults, setJobResults,
+        activeSidebar, setActiveSidebar,
+        loading, setLoading,
+        error, setError
+    } = useHomeContext();
 
-    const handleFindMatches = async () => {
+    console.log('Context state:', {
+        resumeFile,
+        jobResults,
+        region,
+        activeSidebar,
+        loading,
+        error,
+    });
+
+    const handleFindMatches = async (file = resumeFile) => {
         if (!file || !region) {
-            alert('Please select your region and upload a resume.');
+            toast.error('Please upload a resume and select your region.');
             return;
         }
 
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('file', resumeFile);
 
         setLoading(true);
         setError(null);
-        setResult(null);
+        setParsedResume(null);
+        setJobResults([]);
         setActiveSidebar('jobs');
 
         try {
             const res = await uploadResumeWithJobs(formData, region);
             console.log('API Response:', res);
-            setResult(res);
+            setParsedResume(res.parsedResume);
+            setJobResults(res.jobResults || []);
         } catch (err) {
             setError('Failed to upload resume or fetch jobs.');
             console.error(err);
         } finally {
             setLoading(false);
         }
+
+        console.log('resumeFile after API call:', resumeFile);
     };
 
     return (
         <div className={styles.page}>
             <Navbar />
-
+            <Toaster position="top-center" reverseOrder={false} />
             <div className={styles.contentLayout}>
                 <main className={`${styles.main} ${activeSidebar ? styles.shiftLeft : ''}`}>
                     <h2 className={styles.mainTitle}>Upload Your Resume</h2>
@@ -58,7 +76,7 @@ export default function Home() {
                         <strong>skills and experience.</strong>
                     </p>
 
-                    <ResumeUpload file={file} setFile={setFile} />
+                    <ResumeUpload file={resumeFile} setFile={setResumeFile} />
 
                     <div className={styles.regionSelectAndUpload}>
                         <RegionSelect region={region} setRegion={setRegion} />
@@ -77,14 +95,14 @@ export default function Home() {
                     <div className={styles.sidebarToggleBtns}>
                         <button
                             onClick={() => setActiveSidebar('resume')}
-                            disabled={!file}
+                            disabled={!resumeFile}
                             className={`${styles.toggleBtn} ${activeSidebar === 'resume' ? styles.activeBtn : ''}`}
                         >
                             Resume Preview
                         </button>
                         <button
                             onClick={() => setActiveSidebar('jobs')}
-                            disabled={!result?.jobResults?.length}
+                            disabled={!jobResults?.length}
                             className={`${styles.toggleBtn} ${activeSidebar === 'jobs' ? styles.activeBtn : ''}`}
                         >
                             Job Results
@@ -105,7 +123,7 @@ export default function Home() {
                         ) : (
                             <JobResultSection
                                 key="results"
-                                jobs={result?.jobResults || []}
+                                jobs={jobResults}
                                 onClose={() => setActiveSidebar(null)}
                             />
                         )
@@ -114,7 +132,7 @@ export default function Home() {
                     {activeSidebar === 'resume' && (
                         <ResumePreview
                             key="resumeSidebar"
-                            file={file}
+                            file={resumeFile}
                             onClose={() => setActiveSidebar(null)}
                         />
                     )}

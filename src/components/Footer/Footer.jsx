@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Footer.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -14,8 +15,8 @@ export default function Footer() {
                     <div className={styles.product}>
                         <h3>Product</h3>
                         <ul>
-                            <li><a href="/product">How it Works</a></li>
-                            <li><a href="/product">Features</a></li>
+                            <li><Link to="/product">How it Works</Link></li>
+                            <li><Link to="/product">Features</Link></li>
                         </ul>
                     </div>
 
