@@ -1,7 +1,7 @@
 .skeletonWrapper {
     flex-shrink: 0;
-    width: 500px;
-    height: calc(100vh - 10px);
+    width: 550px;
+    height: calc(100vh - 50px);
     overflow-y: auto;
     background: white;
     border: 1rem solid #ffffff;

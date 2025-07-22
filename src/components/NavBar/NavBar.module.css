@@ -20,6 +20,11 @@
 
 .icon {
     margin-right: 0.6rem;
+    width: 65px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .titleGroup {
@@ -50,7 +55,7 @@
 
 .findJobsBtn {
     background-color: #2563eb;
-    text-decoration: non;;
+    text-decoration: none;
     color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
