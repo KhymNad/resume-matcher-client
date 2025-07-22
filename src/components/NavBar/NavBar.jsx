@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/resumeMatcherLogo3.png';
 
