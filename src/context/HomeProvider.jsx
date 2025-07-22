@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HomeContext } from './HomeContext';
+import { HomeContext } from './HomeContextProvider';
 
 export default function HomeProvider({ children }) {
     const [resumeFile, setResumeFile] = useState(null);

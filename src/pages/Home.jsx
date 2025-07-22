@@ -12,7 +12,7 @@ import { uploadResumeWithJobs } from '../services/resume-matcher-api';
 import styles from './Home.module.css';
 import { AnimatePresence } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
-import { useHomeContext } from '../context/HomeContext';
+import { useHomeContext } from '../context/HomeContextProvider';
 
 export default function Home() {
     const {
