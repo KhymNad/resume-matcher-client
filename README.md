@@ -6,32 +6,32 @@ Built with **React**, **Framer Motion**, and **React Router**, this responsive U
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📤 **Resume Upload**  
+-  **Resume Upload**  
   Upload a resume (PDF) directly from your device for AI-powered parsing and analysis.
 
-- 🌎 **Region Selection**  
+-  **Region Selection**  
   Choose the target region for job matching to narrow down relevant listings.
 
-- 🧠 **AI Matching & Extraction**  
+-  **AI Matching & Extraction**  
   Connects to backend APIs to extract job titles, experience, education, and skills using NLP (Hugging Face).
 
-- 🧮 **Job Matching Sidebar**  
+-  **Job Matching Sidebar**  
   Automatically matches skills to jobs using ESCO + embedding search and displays results in a toggleable sidebar.
 
-- 📝 **Resume Preview**  
+-  **Resume Preview**  
   Preview the uploaded resume file from the UI without needing to reupload.
 
-- 🌐 **Dynamic Routing**  
+-  **Dynamic Routing**  
   Navigate between homepage and product info without losing uploaded data using React Context.
 
-- 🎨 **Framer Motion UI**  
+-  **Framer Motion UI**  
   Subtle and professional animations using Framer Motion for smooth transitions.
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 ```bash
 resume-matcher-frontend/
 ├── public/
@@ -55,7 +55,7 @@ resume-matcher-frontend/
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - **React** (Frontend Library)
 - **Framer Motion** (Animation)
@@ -66,7 +66,7 @@ resume-matcher-frontend/
 
 ---
 
-## 🔗 Backend Integration
+##  Backend Integration
 
 This app connects to a full-stack backend:
 
@@ -77,18 +77,18 @@ This app connects to a full-stack backend:
 - **Hugging Face** for Named Entity Recognition (NER)
 
 For the backend repo and deployment guide, see:  
-➡️ [ResumeMatcherAPI GitHub Repo](#https://github.com/KhymNad/resume-matcher-api)
+ [ResumeMatcherAPI GitHub Repo](#https://github.com/KhymNad/resume-matcher-api)
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 📦 Dependencies
+##  Dependencies
 React
 
 React Router
@@ -103,7 +103,7 @@ Axios
 
 Vite (Dev Server)
 
-## 🛠 Future Improvements
+##  Future Improvements
 User authentication + resume history
 
 Save favorite jobs or apply directly from UI
