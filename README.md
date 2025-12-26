@@ -1,4 +1,4 @@
-# 💼 Resume Matcher – Frontend (React)
+# Resume Matcher – Frontend (React)
 
 This is the frontend of **Resume Matcher**, a full-stack AI-powered application that parses resumes, extracts key information using NLP, and finds real-time job listings tailored to the candidate's skills and experience.
 
@@ -18,7 +18,7 @@ Built with **React**, **Framer Motion**, and **React Router**, this responsive U
   Connects to backend APIs to extract job titles, experience, education, and skills using NLP (Hugging Face).
 
 -  **Job Matching Sidebar**  
-  Automatically matches skills to jobs using ESCO + embedding search and displays results in a toggleable sidebar.
+  Automatically matches skills to jobs using the Adzuna API and displays results in a toggleable sidebar.
 
 -  **Resume Preview**  
   Preview the uploaded resume file from the UI without needing to reupload.
@@ -98,8 +98,6 @@ Framer Motion
 React Hot Toast
 
 Classnames
-
-Axios
 
 Vite (Dev Server)
 
