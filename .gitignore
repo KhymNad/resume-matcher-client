@@ -23,3 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Favicons and logos
+public/favicon-32x32.png
+public/favicon.ico
+public/faviconBlue-32x32.png
+public/faviconBlue.ico
+public/faviconWhiteBG-32x32.png
+public/favicon_black_larger.png
+public/favicon_sharp.ico
+public/favicon_white_bg_512.png
+public/resumeMatcherLogo3.png

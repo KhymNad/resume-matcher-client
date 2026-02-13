@@ -1,138 +1,174 @@
 .page {
-    background-color: #f3f4f6;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: #111827;
+  background-color: var(--color-gray-50);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: var(--color-gray-900);
 }
 
 .contentLayout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1280px;
-    padding: 2rem;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1400px;
+  padding: var(--space-10) var(--space-8);
+  box-sizing: border-box;
+  gap: var(--space-8);
 }
 
 .main {
-    flex-grow: 1;
-    flex-shrink: 1;
-    text-align: center;
-    min-width: 0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  min-width: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: margin var(--transition-slow);
 }
 
 .shiftLeft {
-    margin-left: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mainTitle {
-    font-weight: 700;
-    font-size: 1.875rem;
-    margin-bottom: 0.8rem;
-    color: #1f2937;
+  font-weight: 700;
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-900);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .description {
-    color: #6b7280;
-    font-size: 1rem;
-    margin-bottom: 1.8rem;
-    line-height: 1.6;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .regionSelectAndUpload {
-    display: flex;
-    margin-top: 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 2rem;
+  display: flex;
+  margin-top: var(--space-8);
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  gap: var(--space-6);
 }
 
 .findJobsBtn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
 }
 
-.findJobsBtn:hover {
-    background-color: #1d4ed8;
+.findJobsBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-700);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.findJobsBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.findJobsBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .error {
-    color: red;
-    margin-top: 1rem;
+  color: var(--color-error);
+  background-color: var(--color-error-bg);
+  border: 1px solid #fecaca;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
 }
 
 .resultBox {
-    background: #ffffff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    max-width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
+  background: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-6);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--color-gray-200);
 }
 
 .previewBox {
-    background: #ffffff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    max-width: 100%;
+  background: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-6);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  max-width: 100%;
+  border: 1px solid var(--color-gray-200);
 }
 
 .sidebarToggleBtns {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
 }
 
 .toggleBtn {
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 0.375rem;
-    border: 1px solid #2563eb;
-    background-color: white;
-    color: #2563eb;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-primary-600);
+  background-color: var(--color-white);
+  color: var(--color-primary-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
 
 .toggleBtn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--color-gray-300);
+  color: var(--color-gray-400);
 }
 
 .toggleBtn:hover:not(:disabled) {
-    background-color: #2563eb;
-    color: white;
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-700);
+  color: var(--color-primary-700);
 }
 
 .activeBtn {
-    background-color: #2563eb;
-    color: white;
-    pointer-events: none;
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
+  border-color: var(--color-primary-600);
+  pointer-events: none;
+  box-shadow: var(--shadow-xs);
 }

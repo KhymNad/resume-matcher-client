@@ -1,111 +1,125 @@
 .footerSection {
-    width: 100%;
-    background-color: #ffffff;
-    color: #111827;
-    padding: 2rem 1rem 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
-    margin-top: 2rem;
+  width: 100%;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  padding: var(--space-12) var(--space-8) var(--space-6);
+  font-family: var(--font-family);
+  border-top: 1px solid var(--color-gray-200);
+  margin-top: auto;
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-8);
 }
 
 .about {
-    margin-bottom: 2rem;
-    max-width: 300px;
+  margin-bottom: var(--space-4);
+  max-width: 320px;
 }
 
 .about h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
 }
 
 .about p {
-    font-size: 0.9rem;
-    color: #6b7280;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: 1.6;
 }
 
 .linksContainer {
-    display: flex;
-    gap: 4rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    text-align: left;
-    min-width: 300px;
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: left;
+  min-width: 300px;
 }
 
 .linksContainer > div {
-    min-width: 150px;
+  min-width: 150px;
 }
 
 .product h3,
 .contact h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-500);
 }
 
 .product ul,
 .contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .product li,
 .contact li {
-    font-size: 0.9rem;
-    color: #374151;
-    margin-bottom: 0.4rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-2);
 }
 
 .product a {
-    text-decoration: none;
-    color: #000000;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: var(--color-gray-700);
+  transition: color var(--transition-fast);
 }
 
 .product a:hover {
-    color: #0a66c2
+  color: var(--color-primary-600);
 }
 
 .iconRow {
-    display: flex;
-    padding-left: 0.25rem;
-    gap: 1rem;
-    margin-top: 0.4rem;
+  display: flex;
+  padding-left: 0;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
 }
 
 .iconLink {
-    display: inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
-    color: #374151;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-gray-100);
+  transition: background-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+  color: var(--color-gray-600);
 }
 
 .iconLink:hover {
-    transform: scale(1.1);
-    color: #0a66c2; /* Hover color for LinkedIn-style branding */
+  transform: translateY(-2px);
+  background-color: var(--color-primary-600);
+  color: var(--color-white);
 }
 
 .icon {
-    width: 25px;
-    height: 25px;
-    fill: currentColor;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .bottomBar {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #e5e7eb;
-    font-size: 0.85rem;
-    color: #6b7280;
+  text-align: center;
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-gray-200);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  letter-spacing: 0.02em;
 }

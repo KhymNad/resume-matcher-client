@@ -1,89 +1,104 @@
 .header {
-    width: 100%;
-    max-width: 100vw;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #fff;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); 
-    z-index: 1;
+  width: 100%;
+  max-width: 100vw;
+  padding: var(--space-4) var(--space-8);
+  margin-bottom: 0;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-gray-200);
+  z-index: 10;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: var(--space-4);
 }
 
 .icon {
-    margin-right: 0.6rem;
-    width: 65px;
-    height: 50px;
-    cursor: pointer;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  transition: transform var(--transition-fast);
+}
+
+.icon:hover {
+  transform: scale(1.05);
 }
 
 .titleGroup {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111827;
-    margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin-top: 2px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-top: 1px;
+  letter-spacing: 0.01em;
 }
 
 .rightSection {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-    justify-content: right;
-    gap:1rem;
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-4);
+  justify-content: flex-end;
+  gap: var(--space-3);
 }
 
 .findJobsBtn {
-    background-color: #2563eb;
-    text-decoration: none;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
-    transition: background-color 0.3s ease;
+  background-color: var(--color-primary-600);
+  text-decoration: none;
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
+
 .findJobsBtn:hover {
-    background-color: #1d4ed8;
+  background-color: var(--color-primary-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.findJobsBtn:active {
+  transform: translateY(0);
 }
 
 .accountBtn {
-    background-color: #e5e7eb;
-    border: none;
-    padding: 0.4rem 1rem;
-    margin-right: 1rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: #374151;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
-    transition: background-color 0.3s ease;
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-700);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .accountBtn:hover {
-    background-color: #d1d5db;
+  background-color: var(--color-gray-200);
+  border-color: var(--color-gray-300);
 }

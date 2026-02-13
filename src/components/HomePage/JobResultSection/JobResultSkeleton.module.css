@@ -1,49 +1,54 @@
 .skeletonWrapper {
-    flex-shrink: 0;
-    width: 550px;
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-    background: white;
-    border: 1rem solid #ffffff;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 10px;
+  flex-shrink: 0;
+  width: 520px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-gray-200);
 }
 
 .skeletonCard {
-    background: #f9f9f9;
-    border-radius: 8px;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    animation: pulse 1.5s infinite ease-in-out;
-    min-height: 80px;
-    box-sizing: border-box;
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  animation: pulse 1.8s infinite ease-in-out;
+  min-height: 90px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-gray-100);
 }
 
 .skeletonTitle {
-    width: 60%;
-    height: 20px;
-    background: #e5e7eb;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
+  width: 55%;
+  height: 18px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
 }
 
 .skeletonLine {
-    width: 80%;
-    height: 14px;
-    background: #e5e7eb;
-    border-radius: 4px;
-    margin-bottom: 0.25rem;
+  width: 80%;
+  height: 12px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+}
+
+.skeletonLine:last-child {
+  width: 65%;
 }
 
 @keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }

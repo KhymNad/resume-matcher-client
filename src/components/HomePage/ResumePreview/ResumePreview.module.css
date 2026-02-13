@@ -1,97 +1,134 @@
 .resumePreviewSection {
-    flex-shrink: 0;
-    width: 700px;
-    height: calc(100vh - 10px);
-    overflow-y: auto;
-    border: 1rem solid #ffffff;
-    background-color: #ffffff;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-left: 2rem;
+  flex-shrink: 0;
+  width: 680px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-gray-200);
+}
+
+.resumePreviewSection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.resumePreviewSection::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.resumePreviewSection::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-300);
+  border-radius: var(--radius-full);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-gray-900);
 }
 
 .closeBtn {
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 1;
-    color: #555;
-    transition: color 0.2s ease;
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  line-height: 1;
+  color: var(--color-gray-500);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .closeBtn:hover {
-    color: #111;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-900);
 }
 
-.fileInfo{
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 1rem;
+.fileInfo {
+  flex-grow: 0;
+  margin-bottom: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-100);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  line-height: 1.8;
 }
 
 .content {
-    flex-grow: 1;
-    overflow-y: auto;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .pdfPreview {
-    width: 100%;
-    height: 80vh;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .imagePreview {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .textPreview {
-    white-space: pre-wrap;
-    background: #f5f5f5;
-    padding: 1rem;
-    border-radius: 8px;
-    max-height: 80vh;
-    overflow-y: auto;
+  white-space: pre-wrap;
+  background: var(--color-gray-50);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  border: 1px solid var(--color-gray-100);
 }
 
 .docxPreview {
-    background: #fff;
-    padding: 1rem;
-    max-height: 80vh;
-    overflow-x: auto;   /* 👈 enables horizontal scroll */
-    overflow-y: auto;
-    border-radius: 8px;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    width: 100%;
+  background: var(--color-white);
+  padding: var(--space-4);
+  max-height: 80vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--color-gray-100);
 }
 
-/* Optional: make internal content not overflow container */
 .docxPreview * {
-    max-width: 100%;
-    box-sizing: border-box;
-    word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
 }
-    
+
 .unsupportedMsg {
-    font-style: italic;
-    color: #999;
-    margin-top: 1rem;
+  font-style: italic;
+  color: var(--color-gray-400);
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
 }
